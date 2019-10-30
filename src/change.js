@@ -4,12 +4,13 @@ const MIN = 0.01;
 const MAX = 0.99;
 
 const amount = Number(readlineSync.question("\nEnter a dollar amount: "));
-    const changeValue=[25,10,5,1]; //[quaters, dimes, nickels, pennies]
-    let quarters;
-    let dimes;
-    let nickels;
-    let pennies;
-    const variableHolder=[quarters, dimes, nickels, pennies];
+    const quarter=.25;
+    const dime=.1;
+    const nickel=.05;
+    const penny=.01;
+    const changeValue=[quarter*100, dime*100, nickel*100, penny*100]; //[quaters, dimes, nickels, pennies]
+    let = holder=[];
+    const nameHolder=[" quarter", " dime", " nickel", " penny"]
     let type;
     let typeNumber;
     let boolean;
@@ -21,16 +22,21 @@ if (Number.isNaN(amount)) {
 } else {
   for (let whichOne=0;whichOne <=3; whichOne++){
     type=changeValue[whichOne];
-    typeNumber=variableHolder[whichOne];
     if(changeLeft>=type){
-        typeNumber=(changeLeft-changeLeft%type)/type;
+        holder[whichOne]=(changeLeft-changeLeft%type)/type;
         changeLeft=changeLeft%type;
-        console.log(typeNumber);
       } else {
-        typeNumber=0;
-        console.log(typeNumber);
+        holder[whichOne]=0;;
       }
-      //I finished first part of this problem, now i need to do code for quarter/quater depending on quaters=1 or something like that.
+    if(whichOne=== 3){
+      holder[whichOne]= (holder[whichOne] == 1) ?
+      String(holder[whichOne]) + nameHolder[whichOne] :
+      String(holder[whichOne]) + " pennies";
+      } else {
+        holder[whichOne]= (holder[whichOne] == 1) ?
+        String(holder[whichOne]) + nameHolder[whichOne] :
+        String(holder[whichOne]) + nameHolder[whichOne] + "s";
     }
-
+  }
+    console.log("\n" + holder[0] + ", " + holder[1] + ", " + holder[2] + ", and " + holder[3] + ".")
   }
