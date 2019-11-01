@@ -9,7 +9,7 @@ const amount = Number(readlineSync.question("\nEnter a dollar amount: "));
     const nickel=.05;
     const penny=.01;
     const changeValue=[quarter*100, dime*100, nickel*100, penny*100]; //[quaters, dimes, nickels, pennies]
-    let = holder=[];
+    let holder=[];
     const nameHolder=[" quarter", " dime", " nickel", " penny"]
     let type;
     let typeNumber;
