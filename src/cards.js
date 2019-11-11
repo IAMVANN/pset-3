@@ -15,13 +15,13 @@ for(let whichOne = 0; whichOne <= 17; whichOne++){
 }
 for(let whichOnes = 0; whichOnes <= 7; whichOnes++){
     if(card.includes(concurrentSuitArray[whichOnes])){
-        suit=suitArray[whichOnes];
+        suit = suitArray[whichOnes];
     }
 }
 if(rank == "Hi" || suit == "Hi"){
-    valid=false;
+    valid = false;
 }
-if(valid==true){
+if(valid == true){
     console.log("\n" + rank + " of " + suit + ".\n");
 } else{
     console.log("\nInvalid.\n");
